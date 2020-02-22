@@ -281,18 +281,18 @@ static void __cdecl UserInterfaceThread(void *pData)
    HANDLE hInitCompleteEvent = *((HANDLE *) pData);
 
    /* Initialise */
-   InitLogWindow();
+   //InitLogWindow();
    SetEvent(hInitCompleteEvent);
 
    /* Enter a message processing loop */
    while (GetMessage(&msg, (HWND) NULL, 0, 0))
    {
-      TranslateMessage(&msg);
-      DispatchMessage(&msg);
+      //TranslateMessage(&msg);
+      //DispatchMessage(&msg);
    }
 
    /* Cleanup */
-   TermLogWindow();
+   //TermLogWindow();
 
    /* Time to die... */
    exit(0);
